@@ -3,11 +3,10 @@ import "./navbar.css";
 
 function Navbar() {
   return (
-    <div className="mastheader">
-      <header
-        role="banner"
-        className="mastheader-title d-none d-xl-block"
-      ></header>
+    <div className="container">
+      <div className="row">
+        <div className="mastheader bg-white Sticky-top col-12"></div>
+      </div>
     </div>
   );
 }
