@@ -10,7 +10,7 @@ const backgroundHomepage = {
 
 const BannerUnderNav = () => {
   return (
-  <header role="banner" class="row bannerHomepage">
+  <header role="banner" className="row bannerHomepage">
   <div className="col-lg-12">
       <a href={backgroundHomepage.urlLink} title={backgroundHomepage.title}>
         <img className="img-fluid" src={backgroundHomepage.urlImg} alt={backgroundHomepage.title} />
