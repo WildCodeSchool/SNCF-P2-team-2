@@ -5,14 +5,14 @@ import BannerUnderNav from "./components/BannerUnderNav/BannerUnderNav";
 import Card from "./components/Card-itinerary/Card";
 
 function App() {
-	return (
-		<div>
-			<Navbar />
-			<BannerUnderNav />
-			<Card />
-			<main role="main" class="mastcontainer"></main>
-		</div>
-	);
+  return (
+    <div>
+      <Navbar />
+      <BannerUnderNav />
+      <Card />
+      <main role="main" className="mastcontainer"></main>
+    </div>
+  );
 }
 
 export default App;
