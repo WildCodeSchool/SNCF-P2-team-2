@@ -10,7 +10,7 @@ function App() {
       <Navbar />
       <BannerUnderNav />
       <Card />
-      <main role="main" class="mastcontainer"></main>
+      <main role="main" className="mastcontainer"></main>
     </div>
   );
 }
