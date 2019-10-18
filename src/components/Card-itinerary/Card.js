@@ -4,8 +4,8 @@ import "./card.css";
 function Card() {
 	return (
 		<div className="row ">
-			<div className="col-sm-12 col-md-8  mx-auto mt-5 p-5">
-				<div className="bg-white mb-3 rounded p-5">
+			<div className="col-sm-12 col-md-12 col-lg-8  mx-auto p-5 card-itinerary">
+				<div className="bg-white mb-3 rounded p-5 card-shadow">
 					<h2 className="text-uppercase">Itinéraire</h2>
 					<p>
 						Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas
