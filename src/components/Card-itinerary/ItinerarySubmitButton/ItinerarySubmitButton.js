@@ -1,5 +1,10 @@
 import React from "react";
 import "./ItinerarySubmitButton.css";
 
-ItinerarySubmitButton();
+ItinerarySubmitButton(){
+   return(
+       <input onSubmit={}></input>
+   ) 
+};
+
 export default ItinerarySubmitButton;
