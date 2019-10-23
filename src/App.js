@@ -12,7 +12,6 @@ function App() {
 			<Navbar />
 			<BannerUnderNav />
 			<Card />
-			<main role="main" className="mastcontainer"></main>
 		</div>
 	);
 }
