@@ -5,6 +5,7 @@ import Navbar from "./components/Navbar/Navbar";
 import BannerUnderNav from "./components/BannerUnderNav/BannerUnderNav";
 import Card from "./components/Card-itinerary/Card";
 import "./styles.css";
+import ItinerarySubmitButton from "./components/Card-itinerary/ItinerarySubmitButton/ItinerarySubmitButton";
 
 function App() {
 	return (
@@ -12,6 +13,7 @@ function App() {
 			<Navbar />
 			<BannerUnderNav />
 			<Card />
+			<ItinerarySubmitButton />
 			<main role="main" className="mastcontainer"></main>
 		</div>
 	);

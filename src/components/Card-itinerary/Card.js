@@ -1,6 +1,5 @@
 import React from "react";
 import "./card.css";
-import "./ItinerarySubmitButton";
 function Card() {
   return (
     <div className="row ">
