@@ -1,0 +1,27 @@
+{
+  "files": {
+    "main.css": "/SNCF-P2-team-2/static/css/main.d44e91d9.chunk.css",
+    "main.js": "/SNCF-P2-team-2/static/js/main.601fb2db.chunk.js",
+    "main.js.map": "/SNCF-P2-team-2/static/js/main.601fb2db.chunk.js.map",
+    "runtime-main.js": "/SNCF-P2-team-2/static/js/runtime-main.52bdc1a6.js",
+    "runtime-main.js.map": "/SNCF-P2-team-2/static/js/runtime-main.52bdc1a6.js.map",
+    "static/css/2.813f4e5f.chunk.css": "/SNCF-P2-team-2/static/css/2.813f4e5f.chunk.css",
+    "static/js/2.1788cad7.chunk.js": "/SNCF-P2-team-2/static/js/2.1788cad7.chunk.js",
+    "static/js/2.1788cad7.chunk.js.map": "/SNCF-P2-team-2/static/js/2.1788cad7.chunk.js.map",
+    "index.html": "/SNCF-P2-team-2/index.html",
+    "precache-manifest.47bb1a2aeca9190167ddb44fa3319696.js": "/SNCF-P2-team-2/precache-manifest.47bb1a2aeca9190167ddb44fa3319696.js",
+    "service-worker.js": "/SNCF-P2-team-2/service-worker.js",
+    "static/css/2.813f4e5f.chunk.css.map": "/SNCF-P2-team-2/static/css/2.813f4e5f.chunk.css.map",
+    "static/css/main.d44e91d9.chunk.css.map": "/SNCF-P2-team-2/static/css/main.d44e91d9.chunk.css.map",
+    "static/media/Sncf-logo.svg": "/SNCF-P2-team-2/static/media/Sncf-logo.8e3f2aad.svg",
+    "static/media/bootstrap-sncf.min.css": "/SNCF-P2-team-2/static/media/icons.f340f41f.woff",
+    "static/media/banner.jpg": "/SNCF-P2-team-2/static/media/banner.b756f2d8.jpg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.52bdc1a6.js",
+    "static/css/2.813f4e5f.chunk.css",
+    "static/js/2.1788cad7.chunk.js",
+    "static/css/main.d44e91d9.chunk.css",
+    "static/js/main.601fb2db.chunk.js"
+  ]
+}
