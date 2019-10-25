@@ -1,0 +1,32 @@
+/* Component - all */
+.resultItinerary {
+  height: 98px;
+  padding: 10px;
+}
+.resultItinerary p {
+  margin: 0px;
+}
+
+/* Time */
+.resultTime {
+  min-width: 100px;
+}
+.verticalLine {
+  width: 1px;
+}
+.depTime,
+.arrTime {
+  width: 100px;
+}
+.depTime > p,
+.arrTime > p {
+  width: 80%;
+}
+
+/* Duration journey */
+.durationJourneyTotal {
+  min-width: 100px;
+}
+.durationWalking {
+  font-size: 0.9rem;
+}
