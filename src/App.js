@@ -7,14 +7,14 @@ import Card from "./components/Card-itinerary/Card";
 import "./styles.css";
 
 function App() {
-	return (
-		<div>
-			<Navbar />
-			<BannerUnderNav />
-			<Card />
-			<main role="main" className="mastcontainer"></main>
-		</div>
-	);
+  return (
+    <div>
+      <Navbar />
+      <BannerUnderNav />
+      <Card />
+      <main role="main" className="mastcontainer"></main>
+    </div>
+  );
 }
 
 export default App;
