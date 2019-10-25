@@ -1,10 +1,13 @@
-import React, { useState } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import "./inputSearch.css";
 import axios from "axios";
+import Posts from "./Posts/Posts";
 
 const InputSearchDeparture = () => {
 	let [posts, setPosts] = useState([]);
 	let [saveInput, setSaveInput] = useState("");
+	let [menuIsDisplayed, setMenuIsDisplay] = useState(false);
+	let [displayInputInfo, setDisplayInputInfo] = useState(false);
 
 	const getSearchApiSNCF = (param, tab) => {
 		setSaveInput(param);
@@ -20,42 +23,54 @@ const InputSearchDeparture = () => {
 							"Basic " + btoa("55ae775f-ea52-4a11-b7ec-39262176315e"),
 					},
 				})
-				.then((result) => setPosts(result.data.places))
+				.then((result) => {
+					setPosts(result.data.places);
+					setMenuIsDisplay(true);
+				})
 				.catch((error) => error.response);
 		}
 	};
 
+	const handleClickPlace = (place) => {
+		if (place) setSaveInput(place.name);
+		setPosts([]);
+	};
+
+	function useOutsideAlerter(ref) {
+		function handleClickOutside(event) {
+			if (ref.current && !ref.current.contains(event.target)) {
+				setMenuIsDisplay(false);
+			}
+		}
+
+		useEffect(() => {
+			document.addEventListener("mousedown", handleClickOutside);
+			return () => {
+				document.removeEventListener("mousedown", handleClickOutside);
+			};
+		});
+	}
+
+	const wrapperRef = useRef(null);
+	useOutsideAlerter(wrapperRef);
+
 	return (
-		<div className="form-control-container col-sm-12 col-md-6">
+		<div className="form-control-container col-sm-12 col-md-6" ref={wrapperRef}>
 			<input
 				type="text"
 				className="form-control "
 				placeholder="Gare, Station, Lieu, Adresse"
 				onChange={(e) => getSearchApiSNCF(e.target.value, [])}
-				value={saveInput || ""}
+				value={saveInput}
 			/>
-			<div
-				className="border rounded mt-3 position-absolute w-100 bg-white"
-				style={{
-					display: posts.length ? "block" : "none",
-				}}
-			>
-				{posts.length > 0 ? (
-					posts.map((p) => {
-						return (
-							<div
-								key={p.id}
-								className="p-2 border-bottom text-wrap hover-color-sncf"
-								onClick={() => setSaveInput(p.name)}
-							>
-								{p.name}
-							</div>
-						);
-					})
-				) : (
-					<div></div>
-				)}
-			</div>
+			{menuIsDisplayed && (
+				<Posts
+					posts={posts}
+					handleClickPlace={handleClickPlace}
+					setDisplayInputInfo={setDisplayInputInfo}
+					displayInputInfo={displayInputInfo}
+				/>
+			)}
 		</div>
 	);
 };
