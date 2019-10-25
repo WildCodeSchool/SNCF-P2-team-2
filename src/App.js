@@ -4,6 +4,7 @@ import "@sncf/bootstrap-sncf.metier/dist/bootstrap-sncf";
 import Navbar from "./components/Navbar/Navbar";
 import BannerUnderNav from "./components/BannerUnderNav/BannerUnderNav";
 import Card from "./components/CardItinerary/Card";
+import ResultItineraryFormatting from "./components/ResultItineraryFormatting/ResultItineraryFormatting"; // temporaire
 import "./styles.css";
 import ResultItineraryInfos from "./components/ResultItineraryInfos/ResultItineraryInfos";
 

@@ -36,12 +36,14 @@ const ResultItineraryFormatting = props => {
       {/* Duration */}
       <div className="col-md-auto col-6 d-flex flex-md-column border-right justify-content-md-center align-items-center flex-row justify-content-end durationJourney">
         <p className="row-md d-flex flex-row justify-content-center font-weight-bolder font-size-5x durationJourneyTotal">
-          {props.durationJourney}
+          35 min
+          {/* {props.durationJourney} */}
         </p>
-        {props.durationWalking !== "" ? (
+        {/* props.durationWalking */}{" "}
+        {"7 min" !== "" ? (
           <div className="row-md durationWalking">
             <p className="d-none d-md-flex flex-column flex-wrap justify-content-center durationWalking-md">
-              <span>dont {props.durationWalking}</span>
+              <span>dont 7 min{/* {props.durationWalking}*/}</span>
               <span>de marche</span>
             </p>
             <p className="d-md-none durationWalking-sm">
@@ -50,7 +52,8 @@ const ResultItineraryFormatting = props => {
                 className="icons-itinerary-pedestrian icons-size-1x"
                 aria-hidden="true"
               />
-              {props.durationWalking})
+              7 min
+              {/* {props.durationWalking} */})
             </p>
           </div>
         ) : (
