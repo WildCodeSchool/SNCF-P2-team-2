@@ -1,6 +1,8 @@
 import React from "react";
 import "./card.css";
 import ItinerarySubmitButton from "./ItinerarySubmitButton/ItinerarySubmitButton";
+
+
 function Card() {
   return (
     <div className="row ">
