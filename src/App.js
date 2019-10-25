@@ -13,13 +13,9 @@ function App() {
       <Navbar />
       <BannerUnderNav />
       <Card />
-<<<<<<< HEAD
-      <main role="main" className="mastcontainer"></main>
-=======
       <main role="main">
         <ResultItineraryFormatting /> {/* Temporaire */}
       </main>
->>>>>>> ae3e451c543e8e588f97c8f7103b2f56ea6b4dcd
     </div>
   );
 }
