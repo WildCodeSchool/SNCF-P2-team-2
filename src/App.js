@@ -6,7 +6,6 @@ import BannerUnderNav from "./components/BannerUnderNav/BannerUnderNav";
 import Card from "./components/CardItinerary/Card";
 import ResultItineraryFormatting from "./components/ResultItineraryFormatting/ResultItineraryFormatting"; // temporaire
 import "./styles.css";
-import ItinerarySubmitButton from "./components/Card-itinerary/ItinerarySubmitButton/ItinerarySubmitButton";
 
 function App() {
   return (
@@ -14,7 +13,6 @@ function App() {
       <Navbar />
       <BannerUnderNav />
       <Card />
-      <ItinerarySubmitButton />
       <main role="main">
         <ResultItineraryFormatting /> {/* Temporaire */}
       </main>
