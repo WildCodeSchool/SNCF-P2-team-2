@@ -30,3 +30,42 @@
 .durationWalking {
   font-size: 0.9rem;
 }
+
+@media (max-width: 768px) {
+  /* Component - all */
+  .resultItinerary {
+    height: auto;
+    font-size: 0.9rem;
+  }
+  .resultTime.border-right,
+  .durationJourney.border-right,
+  .price.border-left,
+  .detailAccess.border-left {
+    border-right: none !important;
+    border-left: none !important;
+    border-top: #d7d7d7 1px solid;
+    border-bottom: #d7d7d7 1px solid;
+  }
+
+  /* Time */
+  .horizontalLine {
+    height: 1px;
+    margin-left: 0px !important;
+    margin-right: 1rem !important;
+  }
+  .depTime,
+  .arrTime {
+    width: 80px;
+  }
+  /* .depTime {
+    margin-right: -10px !important;
+  }
+  .arrTime {
+    margin-left: -10px !important;
+  } */
+
+  /* Duration journey */
+  .durationWalking {
+    font-size: 0.8rem;
+  }
+}
