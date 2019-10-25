@@ -12,7 +12,8 @@ const ResultItineraryFormatting = props => {
             aria-hidden="true"
           ></i>
           <p className="col-md-8 px-0 text-center font-weight-bolder">
-            {props.depTime}
+            14:08
+            {/* {props.depTime} */}
           </p>
         </div>
         <div className="row-md d-none d-md-flex flex-row h-100 w-100 align-items-center justify-content-center forVerticalLine">
@@ -27,7 +28,8 @@ const ResultItineraryFormatting = props => {
             aria-hidden="true"
           ></i>
           <p className="col-md-8 px-0 text-center font-weight-bolder">
-            {props.arrTime}
+            14:43
+            {/* {props.arrTime} */}
           </p>
         </div>
       </div>
@@ -35,36 +37,36 @@ const ResultItineraryFormatting = props => {
       {/* Duration */}
       <div className="col-md-auto d-flex flex-column border-right justify-content-center align-items-center durationJourney">
         <p className="row-md d-flex flex-row justify-content-center font-weight-bolder font-size-5x durationJourneyTotal">
-          {props.durationJourney}
+          35 min
+          {/* {props.durationJourney} */}
         </p>
-        {props.durationWalking !== "" ? (
-          <div className="row-md durationWalking">
-            <p className="d-none d-md-flex flex-column flex-wrap justify-content-center durationWalking-md">
-              <span>dont {props.durationWalking}</span>
-              <span>de marche</span>
-            </p>
-            <p className="d-md-none durationWalking-sm">
-              (
-              <i
-                className="icons-itinerary-pedestrian icons-size-1x"
-                aria-hidden="true"
-              />
-              {props.durationWalking})
-            </p>
-          </div>
-        ) : (
-          ""
-        )}
+        {/* {props.durationWalking !== "" ? ( */}
+        <div className="row-md durationWalking">
+          <p className="d-none d-md-flex flex-column flex-wrap justify-content-center durationWalking-md">
+            <span>dont 7 min{/* {props.durationWalking}*/}</span>
+            <span>de marche</span>
+          </p>
+          <p className="d-md-none durationWalking-sm">
+            (
+            <i
+              className="icons-itinerary-pedestrian icons-size-1x"
+              aria-hidden="true"
+            />
+            7 min
+            {/* {props.durationWalking} */})
+          </p>
+        </div>
+        ) : ( "" )}
       </div>
 
       {/* Transport mode */}
       <div className="col d-flex align-items-center transportJourney">
-        <p>{props.transportJourney}</p>
+        <p>M 4 - M 1 - W{/* {props.transportJourney} */}</p>
       </div>
 
       {/* Price */}
       <div className="col-md-auto border-left d-flex justify-content-center align-items-center font-weight-bolder price">
-        <p>{props.price}</p>
+        <p>1,90 €{/* {props.price} */}</p>
       </div>
 
       {/* Detail button */}
