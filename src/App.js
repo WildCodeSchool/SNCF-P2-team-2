@@ -4,7 +4,7 @@ import "@sncf/bootstrap-sncf.metier/dist/bootstrap-sncf";
 import Navbar from "./components/Navbar/Navbar";
 import BannerUnderNav from "./components/BannerUnderNav/BannerUnderNav";
 import Card from "./components/CardItinerary/Card";
-import ResultItineraryFormatting from "./components/ResultItineraryFormatting/ResultItineraryFormatting"; // temporaire
+import ResultItineraryInfos from "./components/ResultItineraryInfos/ResultItineraryInfos";
 import "./styles.css";
 
 function App() {
@@ -14,7 +14,7 @@ function App() {
       <BannerUnderNav />
       <Card />
       <main role="main">
-        <ResultItineraryFormatting /> {/* Temporaire */}
+        <ResultItineraryInfos />
       </main>
     </div>
   );
