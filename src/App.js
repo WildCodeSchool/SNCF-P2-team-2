@@ -3,18 +3,21 @@ import "@sncf/bootstrap-sncf.metier/dist/bootstrap-sncf.min.css";
 import "@sncf/bootstrap-sncf.metier/dist/bootstrap-sncf";
 import Navbar from "./components/Navbar/Navbar";
 import BannerUnderNav from "./components/BannerUnderNav/BannerUnderNav";
-import Card from "./components/Card-itinerary/Card";
+import Card from "./components/CardItinerary/Card";
+import ResultItineraryInfos from "./components/ResultItineraryInfos/ResultItineraryInfos";
 import "./styles.css";
 
 function App() {
-	return (
-		<div>
-			<Navbar />
-			<BannerUnderNav />
-			<Card />
-			<main role="main" className="mastcontainer"></main>
-		</div>
-	);
+  return (
+    <div>
+      <Navbar />
+      <BannerUnderNav />
+      <Card />
+      <main role="main">
+        <ResultItineraryInfos />
+      </main>
+    </div>
+  );
 }
 
 export default App;
