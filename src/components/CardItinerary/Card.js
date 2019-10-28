@@ -3,6 +3,7 @@ import "./card.css";
 import ItinerarySubmitButton from "./ItinerarySubmitButton/ItinerarySubmitButton";
 import InputSearchDeparture from "../InputSearchDeparture/InputSearchDeparture";
 import DatePickerr from "../DatePicker/Picker";
+import SelectDepArr from "../SelectDepArr/SelectDepArr";
 
 function Card() {
   return (
@@ -11,6 +12,7 @@ function Card() {
         <div className="bg-white mb-3 rounded p-5 card-shadow">
           <h2 className="text-uppercase">Itinéraire</h2>
           <InputSearchDeparture />
+          <SelectDepArr />
           <ItinerarySubmitButton />
           <DatePickerr />
         </div>
