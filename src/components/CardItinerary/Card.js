@@ -4,6 +4,7 @@ import ItinerarySubmitButton from "./ItinerarySubmitButton/ItinerarySubmitButton
 import InputSearchDeparture from "../InputSearchDeparture/InputSearchDeparture";
 import DatePickerr from "../DatePicker/Picker";
 import SelectDepArr from "../SelectDepArr/SelectDepArr";
+import Timepickerform from "../Timeselectform";
 
 function Card() {
   return (
@@ -15,6 +16,7 @@ function Card() {
           <SelectDepArr />
           <ItinerarySubmitButton />
           <DatePickerr />
+          <Timepickerform />
         </div>
       </div>
     </div>
