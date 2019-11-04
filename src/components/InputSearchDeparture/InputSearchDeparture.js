@@ -55,7 +55,10 @@ const InputSearchDeparture = () => {
 	useOutsideAlerter(wrapperRef);
 
 	return (
-		<div className="form-control-container col-sm-12 col-md-6" ref={wrapperRef}>
+		<div
+			className="form-control-container border border-primary rounded"
+			ref={wrapperRef}
+		>
 			<input
 				type="text"
 				className="form-control "
