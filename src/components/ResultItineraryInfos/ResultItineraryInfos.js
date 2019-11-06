@@ -2,7 +2,8 @@ import React from "react";
 import mockData from "../mockData"; // temporaire
 import {
   DataTimeFormatting,
-  DataDurationFormatting
+  DataDurationFormatting,
+  DataPriceFormatting
 } from "../DataAPIFormatting/DataAPIFormatting";
 import ResultItineraryFormatting from "../ResultItineraryFormatting/ResultItineraryFormatting";
 
@@ -20,7 +21,11 @@ const ResultItineraryInfos = () => {
             : ""
         }
         transportJourney={res.transportJourney}
-        price={res.price}
+        price={
+          res.price.fareFound
+            ? DataPriceFormatting(res.price.fareTotalValue)
+            : "-"
+        }
       />
     );
   });

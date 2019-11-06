@@ -7,3 +7,8 @@ export const DataDurationFormatting = durationTotal => {
   const totalMin = parseInt(durationTotal / 60) - totalHours * 60;
   return totalHours > 0 ? `${totalHours} h ${totalMin} min` : `${totalMin} min`;
 };
+
+export const DataPriceFormatting = priceTotal => {
+  const priceFr = priceTotal.replace(".", ",");
+  return `${priceFr} €`;
+};

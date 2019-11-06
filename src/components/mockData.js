@@ -5,7 +5,10 @@ const mockData = [
     durationJourney: 2100,
     durationWalking: 420,
     transportJourney: "M 4 - M 1 - Walking",
-    price: "1,90 €"
+    price: {
+      fareFound: true,
+      fareTotalValue: "1.90"
+    }
   },
   {
     depTime: "20191105T141900",
@@ -13,7 +16,10 @@ const mockData = [
     durationJourney: 2400,
     durationWalking: 0,
     transportJourney: "M 4 - RER C",
-    price: "1,90 €"
+    price: {
+      fareFound: true,
+      fareTotalValue: "1.90"
+    }
   },
   {
     depTime: "20191105T141200",
@@ -21,7 +27,10 @@ const mockData = [
     durationJourney: 6540,
     durationWalking: 0,
     transportJourney: "B 92 - B 82",
-    price: "1,90 €"
+    price: {
+      fareFound: true,
+      fareTotalValue: "1.90"
+    }
   }
 ];
 
