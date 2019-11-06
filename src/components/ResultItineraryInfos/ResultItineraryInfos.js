@@ -2,7 +2,7 @@ import React from "react";
 import mockData from "../mockData"; // temporaire
 import {
   DataTimeFormatting,
-  DataDurationJourneyFormatting
+  DataDurationFormatting
 } from "../DataAPIFormatting/DataAPIFormatting";
 import ResultItineraryFormatting from "../ResultItineraryFormatting/ResultItineraryFormatting";
 
@@ -13,8 +13,12 @@ const ResultItineraryInfos = () => {
         key={res.depTime + res.arrTime}
         depTime={DataTimeFormatting(res.depTime)}
         arrTime={DataTimeFormatting(res.arrTime)}
-        durationJourney={DataDurationJourneyFormatting(res.durationJourney)}
-        durationWalking={res.durationWalking}
+        durationJourney={DataDurationFormatting(res.durationJourney)}
+        durationWalking={
+          res.durationWalking > 0
+            ? DataDurationFormatting(res.durationWalking)
+            : ""
+        }
         transportJourney={res.transportJourney}
         price={res.price}
       />
