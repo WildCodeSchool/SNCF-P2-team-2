@@ -8,18 +8,18 @@ class TimeSelectForm extends Component {
     value: moment()
   };
 
-  handleChange = value => this.setState({ value });
-
-  handleSubmit = e => {
-    e.preventDefault();
-    alert(moment(this.state.value).format("hh:mm a"));
+  handleChange = value => {
+    console.log(value);
+    this.setState({ value });
   };
 
-  render = () => (
-    <form onSubmit={this.handleSubmit}>
-      <TimePicker value={this.state.value} onChange={this.handleChange} />
-    </form>
-  );
+  render = () => {
+    return (
+      <form>
+        <TimePicker value={this.state.value} onChange={this.handleChange} />
+      </form>
+    );
+  };
 }
 
 export default TimeSelectForm;
