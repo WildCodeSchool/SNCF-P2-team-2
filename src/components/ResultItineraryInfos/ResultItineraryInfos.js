@@ -1,5 +1,10 @@
 import React from "react";
 import mockData from "../mockData"; // temporaire
+import {
+  DataTimeFormatting,
+  DataDurationFormatting,
+  DataPriceFormatting
+} from "../DataAPIFormatting/DataAPIFormatting";
 import ResultItineraryFormatting from "../ResultItineraryFormatting/ResultItineraryFormatting";
 
 const ResultItineraryInfos = () => {
@@ -7,12 +12,20 @@ const ResultItineraryInfos = () => {
     return (
       <ResultItineraryFormatting
         key={res.depTime + res.arrTime}
-        depTime={res.depTime}
-        arrTime={res.arrTime}
-        durationJourney={res.durationJourney}
-        durationWalking={res.durationWalking}
+        depTime={DataTimeFormatting(res.depTime)}
+        arrTime={DataTimeFormatting(res.arrTime)}
+        durationJourney={DataDurationFormatting(res.durationJourney)}
+        durationWalking={
+          res.durationWalking > 0
+            ? DataDurationFormatting(res.durationWalking)
+            : ""
+        }
         transportJourney={res.transportJourney}
-        price={res.price}
+        price={
+          res.price.fareFound
+            ? DataPriceFormatting(res.price.fareTotalValue)
+            : "-"
+        }
       />
     );
   });
