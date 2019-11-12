@@ -1,15 +1,16 @@
 import React from "react";
+import "./posts.css";
 
 const Posts = (props) => {
 	return (
 		<div>
 			{props.posts.length !== 0 && (
-				<div className="border rounded mt-3 border-primary position-absolute w-100 bg-white">
+				<div className="border rounded mt-3 border-primary position-formulaire scroll-bar-result w-100 bg-white">
 					{props.posts.length > 0 ? (
-						props.posts.map((p) => {
+						props.posts.map((p, index) => {
 							return (
 								<div
-									key={p.id}
+									key={index}
 									className="p-2 border-bottom text-wrap hover-color-sncf"
 									onClick={() => props.handleClickPlace(p)}
 								>
@@ -18,7 +19,7 @@ const Posts = (props) => {
 							);
 						})
 					) : (
-						<div></div>
+						<div>Chargement...</div>
 					)}
 				</div>
 			)}
