@@ -12,8 +12,8 @@ const DeliTimePicker = ({ className, onChange, value, ...rest }) => (
     showSecond={false}
     onChange={onChange}
     hideDisabledOptions
-    minuteStep={15}
     value={value}
+    minuteStep={15}
   />
 );
 
