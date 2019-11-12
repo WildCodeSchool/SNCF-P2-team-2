@@ -2,3 +2,9 @@
     z-index: 8000;
     position: absolute;
 }
+
+.scroll-bar-result {
+    overflow-y: scroll;
+    height: 500%;
+    
+}
