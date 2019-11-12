@@ -8,7 +8,6 @@ const ItinerarySubmitButton = (props) => {
 			id="btnsubmit"
 			type="submit"
 			className="btn btn-primary w-100"
-			onClick={props.onClickSubmit}
 		>
 			RECHERCHER
 		</button>

@@ -13,7 +13,7 @@ const InputSearchDeparture = () => {
 
 	const getSearchApiSNCF = (param, tab) => {
 		setSaveInput(param);
-		if (param < 3) {
+		if (param.length < 3) {
 			setPosts([]);
 			return false;
 		}
