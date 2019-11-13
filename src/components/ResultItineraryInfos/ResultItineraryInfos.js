@@ -1,5 +1,4 @@
 import React from "react";
-import mockData from "../mockData"; // temporaire
 import {
   DataTimeFormatting,
   DataDurationFormatting,
@@ -7,8 +6,8 @@ import {
 } from "../DataAPIFormatting/DataAPIFormatting";
 import ResultItineraryFormatting from "../ResultItineraryFormatting/ResultItineraryFormatting";
 
-const ResultItineraryInfos = () => {
-  return mockData.map(res => {
+const ResultItineraryInfos = ({ globalState }) => {
+  return globalState.result.map(res => {
     return (
       <ResultItineraryFormatting
         key={res.depTime + res.arrTime}
