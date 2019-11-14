@@ -40,6 +40,7 @@ const InputSearchDeparture = ({ globalState, setGlobalState, type }) => {
     const newGlobalState = { ...globalState };
     const name = place.name;
     const stop_area =
+      place.stop_area &&
       place.stop_area.coord &&
       place.stop_area.coord.lon + ";" + place.stop_area.coord.lat;
     const administrative_region =
