@@ -8,8 +8,13 @@ export const dataTimeFormatting = timeString => {
 
 export const dataDurationFormatting = durationTotal => {
   const totalHours = parseInt(durationTotal / 3600);
-  const totalMin = parseInt(durationTotal / 60) - totalHours * 60;
-  return totalHours > 0 ? `${totalHours} h ${totalMin} min` : `${totalMin} min`;
+  const totalMin = () => {
+    return parseInt(durationTotal / 60) - totalHours * 60;
+  };
+
+  return totalHours > 0
+    ? `${totalHours} h ${totalMin() < 10 ? "0" + totalMin() : totalMin()} min`
+    : `${totalMin()} min`;
 };
 
 export const dataPriceFormatting = priceTotal => {
