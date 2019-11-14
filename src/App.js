@@ -27,6 +27,7 @@ function App() {
     },
     date: new Date(),
     time: moment(),
+    selectValue: "departure",
     result: mockData
   });
   console.log(globalState);
