@@ -4,7 +4,6 @@ import "./timepickerform.css";
 
 const TimeSelectForm = props => {
   const handleChange = value => {
-    console.log(value);
     props.setGlobalState({ ...props.globalState, time: value });
   };
 
