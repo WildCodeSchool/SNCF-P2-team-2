@@ -4,14 +4,16 @@ import axios from "axios";
 import Posts from "./Posts/Posts";
 
 const InputSearchDeparture = () => {
-	let [posts, setPosts] = useState([]);
-	let [saveInput, setSaveInput] = useState("");
-	let [menuIsDisplayed, setMenuIsDisplay] = useState(false);
-	let [displayInputInfo, setDisplayInputInfo] = useState(false);
+	const [posts, setPosts] = useState([]);
+	const [saveInput, setSaveInput] = useState("");
+	const [menuIsDisplayed, setMenuIsDisplay] = useState(false);
+	const [displayInputInfo, setDisplayInputInfo] = useState(false);
+	const [coord, setCoord] = useState(null);
+	const [getR, setGetR] = useState([]);
 
 	const getSearchApiSNCF = (param, tab) => {
 		setSaveInput(param);
-		if (param < 3) {
+		if (param.length < 3) {
 			setPosts([]);
 			return false;
 		}
@@ -33,6 +35,16 @@ const InputSearchDeparture = () => {
 
 	const handleClickPlace = (place) => {
 		if (place) setSaveInput(place.name);
+		const stop_area = place.stop_area
+			? setCoord(place.stop_area.coord.lon + ";" + place.stop_area.coord.lat)
+			: place;
+
+		const administrative_region = place.administrative_region
+			? setCoord(place.administrative_region.id)
+			: place;
+
+		const addresses = place.address ? setCoord(place.address.id) : place;
+
 		setPosts([]);
 	};
 
@@ -51,30 +63,69 @@ const InputSearchDeparture = () => {
 		});
 	}
 
+	const handleSubmit = (e) => {
+		e.preventDefault();
+
+		axios
+			.get(
+				`
+				https://api.sncf.com/v1/coverage/sncf/journeys?from=${coord}&to=2.2922926%3B48.8583736&`,
+				{
+					headers: {
+						Authorization:
+							"Basic " + btoa("dabb1e17-6d71-4347-ae82-5bec51cdb63f"),
+					},
+				},
+			)
+			.then((res) => {
+				console.log(res.data.journeys);
+				setGetR(res.data.journeys);
+			})
+			.catch((err) => console.log(err.message));
+	};
+
 	const wrapperRef = useRef(null);
 	useOutsideAlerter(wrapperRef);
 
 	return (
-		<div
-			className="form-control-container border border-primary rounded"
-			ref={wrapperRef}
-		>
-			<input
-				type="text"
-				className="form-control "
-				placeholder="Gare, Station, Lieu, Adresse"
-				onChange={(e) => getSearchApiSNCF(e.target.value, [])}
-				value={saveInput}
-			/>
-			{menuIsDisplayed && (
-				<Posts
-					posts={posts}
-					handleClickPlace={handleClickPlace}
-					setDisplayInputInfo={setDisplayInputInfo}
-					displayInputInfo={displayInputInfo}
-				/>
-			)}
-		</div>
+		<>
+			<div
+				className="form-control-container border border-primary rounded"
+				ref={wrapperRef}
+			>
+				{coord}
+
+				<form onSubmit={handleSubmit}>
+					<input
+						type="text"
+						className="form-control "
+						placeholder="Gare, Station, Lieu, Adresse"
+						onChange={(e) => getSearchApiSNCF(e.target.value, [])}
+						value={saveInput}
+					/>
+					<button className="btn btn-danger" type="submit">
+						GO
+					</button>
+				</form>
+
+				{menuIsDisplayed && (
+					<Posts
+						posts={posts}
+						handleClickPlace={handleClickPlace}
+						setDisplayInputInfo={setDisplayInputInfo}
+						displayInputInfo={displayInputInfo}
+					/>
+				)}
+			</div>
+			<div>
+				{getR &&
+					getR.map((g, index) => (
+						<div key={index}>
+							{g.arrival_date_time} - {g.distances.walking} m
+						</div>
+					))}
+			</div>
+		</>
 	);
 };
 

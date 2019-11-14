@@ -2,24 +2,51 @@
     font-family: "Consolas",sans-serif;
     font-size: 16px;
     cursor: pointer;
+    border: 1px solid #0088CC;
+    border-radius: 5px;
+    display: flex;
+    text-align: center;
+    width: 180px;
+    color: black;
+    min-height: 50px;
+}
+.rc-time-picker-panel-select {
+    left:6px;
+    height: 300px;
+    overflow: scroll;
+}
+.rc-time-picker-input {
+    color: #0088CC;
+}
+.kWDRsS .rc-time-picker-panel-select, .kWDRsS .rc-time-picker-input, .kWDRsS .rc-time-picker-panel-input {
+    
+} 
+.react-date-picker, .react-date-picker *, .react-date-picker *:before, .react-date-picker *:after {
+    
+    font-weight: 500;
+}
+ul {
+    height: 150px;
+    color: #0088CC;
+    overflow: scroll;
+}
+div.rc-time-picker-panel-inner {
+    height: 360px;
+
+}
+.rc-time-picker-panel-select-option > ul  {
+    height: 550px;
+}
+/*.kWDRsS .rc-time-picker-panel-select, .kWDRsS .rc-time-picker-input, .kWDRsS .rc-time-picker-panel-input {
+    font-family: "Consolas",sans-serif;
+    font-size: 16px;
+    cursor: pointer;
     border: 1px solid rgb(11, 132, 184);
-    height: 60px;
+    height: 160px; 
     border-radius: 5px;
     display: flex;
     text-align: center;
     width: 160px;
     color: black;
-}
-.rc-time-picker-panel-select {
-    float: left;
-    font-size: 12px;
-    border: 1px solid #e9e9e9;
-    border-width: 0 1px;
-    margin-left: -1px;
-    box-sizing: border-box;
-    width: 56px;
-    /*max-height: 144px;
-    /* overflow-y: auto; */
-    overflow: scroll;
-    position: relative;
-}
+    overflow:scroll;
+}*/
