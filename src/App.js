@@ -5,7 +5,6 @@ import Navbar from "./components/Navbar/Navbar";
 import BannerUnderNav from "./components/BannerUnderNav/BannerUnderNav";
 import Card from "./components/CardItinerary/Card";
 import ResultItineraryInfos from "./components/ResultItineraryInfos/ResultItineraryInfos";
-// import axios from "axios";
 import "./styles.css";
 import mockData from "./components/mockData.js";
 import moment from "moment";
@@ -18,8 +17,6 @@ const defaultPlaceState = {
 };
 
 function App() {
-  // const [coord, setCoord] = useState(null);
-  // const [getR, setGetR] = useState([]);
   const [globalState, setGlobalState] = useState({
     inputs: {
       depart: { ...defaultPlaceState },
@@ -31,33 +28,14 @@ function App() {
     result: mockData
   });
   console.log(globalState);
-  // const handleSubmit = e => {
-  //   e.preventDefault();
-
-  //   axios
-  //     .get(
-  //       `
-  // 			https://api.sncf.com/v1/coverage/sncf/journeys?from=${coord}&to=2.2922926%3B48.8583736&`,
-  //       {
-  //         headers: {
-  //           Authorization:
-  //             "Basic " + btoa("dabb1e17-6d71-4347-ae82-5bec51cdb63f")
-  //         }
-  //       }
-  //     )
-  //     .then(res => {
-  //       console.log(res.data.journeys);
-  //       setGetR(res.data.journeys);
-  //     })
-  //     .catch(err => console.log(err.message));
-  // };
 
   return (
     <div>
       <Navbar />
       <BannerUnderNav />
-      <Card globalState={globalState} setGlobalState={setGlobalState} />
+
       <main role="main">
+        <Card globalState={globalState} setGlobalState={setGlobalState} />
         <ResultItineraryInfos
           globalState={globalState}
           setGlobalState={setGlobalState}
