@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import moment from "moment";
-import TimePicker from "../TimePicker";
+import TimePicker from "../TimePicker/TimeStyle";
 import "./timepickerform.css";
 
 class TimeSelectForm extends Component {

@@ -4,7 +4,7 @@ import ItinerarySubmitButton from "./ItinerarySubmitButton/ItinerarySubmitButton
 import InputSearchDeparture from "../InputSearchDeparture/InputSearchDeparture";
 import DatePickerr from "../DatePicker/Picker";
 import SelectDepArr from "../SelectDepArr/SelectDepArr";
-import Timepickerform from "../Timeselectform";
+import Timepickerform from "../Timeselectform/TimeSelectForm";
 
 function Card(props) {
   const { globalState, setGlobalState } = props;
