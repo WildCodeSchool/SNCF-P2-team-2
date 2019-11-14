@@ -8,6 +8,7 @@ import ResultItineraryInfos from "./components/ResultItineraryInfos/ResultItiner
 // import axios from "axios";
 import "./styles.css";
 import mockData from "./components/mockData.js";
+import moment from "moment";
 
 const defaultPlaceState = {
   name: "",
@@ -24,9 +25,11 @@ function App() {
       depart: { ...defaultPlaceState },
       arrival: { ...defaultPlaceState }
     },
+    date: new Date(),
+    time: moment(),
     result: mockData
   });
-
+  console.log(globalState);
   // const handleSubmit = e => {
   //   e.preventDefault();
 

@@ -1,25 +1,18 @@
-import React, { Component } from "react";
-import moment from "moment";
+import React from "react";
 import TimePicker from "../TimePicker/TimeStyle";
 import "./timepickerform.css";
 
-class TimeSelectForm extends Component {
-  state = {
-    value: moment()
-  };
-
-  handleChange = value => {
+const TimeSelectForm = props => {
+  const handleChange = value => {
     console.log(value);
-    this.setState({ value });
+    props.setGlobalState({ ...props.globalState, time: value });
   };
 
-  render = () => {
-    return (
-      <form>
-        <TimePicker value={this.state.value} onChange={this.handleChange} />
-      </form>
-    );
-  };
-}
+  return (
+    <div>
+      <TimePicker value={props.globalState.time} onChange={handleChange} />
+    </div>
+  );
+};
 
 export default TimeSelectForm;
