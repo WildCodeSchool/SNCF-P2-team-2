@@ -9,13 +9,26 @@ const ItinerarySubmitButton = ({ globalState, setGlobalState }) => {
     globalState.date,
     globalState.time._d
   );
+  const place = globalState.inputs;
 
   const handleSubmit = () => {
     axios
-      .get("url de la sncrf", {
-        ...globalState
-      })
-      .then(res => setGlobalState(res))
+      .get(
+        `https://api.sncf.com/v1/coverage/sncf/journeys?from=${place.depart.coordPlace}&to=${place.arrival.coordPlace}&datetime=${dateAndTime}&datetime_represents=${globalState.selectValue}&`,
+        {
+          ...globalState,
+          headers: {
+            Authorization:
+              "Basic " + btoa("dabb1e17-6d71-4347-ae82-5bec51cdb63f")
+          }
+        }
+      )
+      .then(res =>
+        setGlobalState({
+          ...globalState,
+          result: res.data.journeys
+        })
+      )
       .catch(err => console.error(err));
   };
   return (

@@ -46,12 +46,20 @@ const InputSearchDeparture = ({ globalState, setGlobalState, type }) => {
     const administrative_region =
       place.administrative_region && place.administrative_region.id;
     const addresses = place.address && place.address.id;
-
+    let coordPlace = "";
+    if (stop_area !== undefined) {
+      coordPlace = stop_area;
+    } else if (administrative_region !== undefined) {
+      coordPlace = administrative_region;
+    } else if (addresses !== undefined) {
+      coordPlace = addresses;
+    }
     newGlobalState.inputs[type] = {
       name,
-      stop_area,
-      administrative_region,
-      addresses
+      coordPlace
+      // stop_area,
+      // administrative_region,
+      // addresses
     };
     setGlobalState(newGlobalState);
   };

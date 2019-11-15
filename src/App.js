@@ -11,9 +11,10 @@ import moment from "moment";
 
 const defaultPlaceState = {
   name: "",
-  stop_area: "",
-  administrative_region: "",
-  addresses: ""
+  coordPlace: ""
+  // stop_area: "",
+  // administrative_region: "",
+  // addresses: ""
 };
 
 function App() {
