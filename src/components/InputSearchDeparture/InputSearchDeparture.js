@@ -21,7 +21,7 @@ const InputSearchDeparture = ({ globalState, setGlobalState, type }) => {
 	const getSearchApiSNCF = (param, tab) => {
 		const newGlobalState = { ...globalState };
 
-		if (!param.match("^[a-zA-Z ]*$")) {
+		if (!param.match("^[a-zA-Z0-9 ]*$")) {
 			toast.error(
 				"L’Expression que vous avez entrée contient une syntaxe non valide",
 				{
