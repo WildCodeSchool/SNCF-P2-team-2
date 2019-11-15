@@ -7,8 +7,6 @@ const InputSearchDeparture = ({ globalState, setGlobalState, type }) => {
   const [posts, setPosts] = useState([]);
   const [menuIsDisplayed, setMenuIsDisplay] = useState(false);
   const [displayInputInfo, setDisplayInputInfo] = useState(false);
-  //   const [coord, setCoord] = useState(null);
-  //   const [getR, setGetR] = useState([]);
 
   const getSearchApiSNCF = (param, tab) => {
     const newGlobalState = { ...globalState };
@@ -57,27 +55,9 @@ const InputSearchDeparture = ({ globalState, setGlobalState, type }) => {
     newGlobalState.inputs[type] = {
       name,
       coordPlace
-      // stop_area,
-      // administrative_region,
-      // addresses
     };
     setGlobalState(newGlobalState);
   };
-
-  //   const handleClickPlace = place => {
-  //     if (place) setSaveInput(place.name);
-  //     const stop_area = place.stop_area
-  //       ? setCoord(place.stop_area.coord.lon + ";" + place.stop_area.coord.lat)
-  //       : place;
-
-  //     const administrative_region = place.administrative_region
-  //       ? setCoord(place.administrative_region.id)
-  //       : place;
-
-  //     const addresses = place.address ? setCoord(place.address.id) : place;
-
-  //     setPosts([]);
-  //   };
 
   function useOutsideAlerter(ref) {
     function handleClickOutside(event) {
@@ -94,27 +74,6 @@ const InputSearchDeparture = ({ globalState, setGlobalState, type }) => {
     });
   }
 
-  // const handleSubmit = (e) => {
-  // 	e.preventDefault();
-
-  // 	axios
-  // 		.get(
-  // 			`
-  // 			https://api.sncf.com/v1/coverage/sncf/journeys?from=${coord}&to=2.2922926%3B48.8583736&`,
-  // 			{
-  // 				headers: {
-  // 					Authorization:
-  // 						"Basic " + btoa("dabb1e17-6d71-4347-ae82-5bec51cdb63f"),
-  // 				},
-  // 			},
-  // 		)
-  // 		.then((res) => {
-  // 			console.log(res.data.journeys);
-  // 			setGetR(res.data.journeys);
-  // 		})
-  // 		.catch((err) => console.log(err.message));
-  // };
-
   const wrapperRef = useRef(null);
   useOutsideAlerter(wrapperRef);
 
@@ -124,8 +83,6 @@ const InputSearchDeparture = ({ globalState, setGlobalState, type }) => {
         className="form-control-container border border-primary rounded"
         ref={wrapperRef}
       >
-        {/* {coord} */}
-
         <input
           type="text"
           className="form-control "
@@ -145,14 +102,6 @@ const InputSearchDeparture = ({ globalState, setGlobalState, type }) => {
             displayInputInfo={displayInputInfo}
           />
         )}
-      </div>
-      <div>
-        {/* {getR &&
-          getR.map((g, index) => (
-            <div key={index}>
-              {g.arrival_date_time} - {g.distances.walking} m
-            </div>
-          ))} */}
       </div>
     </>
   );

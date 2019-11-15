@@ -4,7 +4,6 @@ import axios from "axios";
 import { dateAndTimeToAPIFormat } from "../../ToAPIFormat/ToAPIFormat";
 
 const ItinerarySubmitButton = ({ globalState, setGlobalState }) => {
-  // transformation de la date et de l'heure en chaîne correspondant au format de l'API :
   const dateAndTime = dateAndTimeToAPIFormat(
     globalState.date,
     globalState.time._d

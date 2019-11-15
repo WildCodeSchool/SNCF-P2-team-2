@@ -6,15 +6,11 @@ import BannerUnderNav from "./components/BannerUnderNav/BannerUnderNav";
 import Card from "./components/CardItinerary/Card";
 import ResultItineraryInfos from "./components/ResultItineraryInfos/ResultItineraryInfos";
 import "./styles.css";
-import mockData from "./components/mockData.js";
 import moment from "moment";
 
 const defaultPlaceState = {
   name: "",
   coordPlace: ""
-  // stop_area: "",
-  // administrative_region: "",
-  // addresses: ""
 };
 
 function App() {
@@ -26,7 +22,7 @@ function App() {
     date: new Date(),
     time: moment(),
     selectValue: "departure",
-    result: mockData
+    result: {}
   });
   console.log(globalState);
 
