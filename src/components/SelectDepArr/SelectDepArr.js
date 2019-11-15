@@ -1,4 +1,5 @@
 import React from "react";
+import "./SelectDepArr.css";
 
 const SelectDepArr = props => {
   const pickSelectedOption = event => {
@@ -9,7 +10,7 @@ const SelectDepArr = props => {
   };
 
   return (
-    <div>
+    <div className="selectbetween">
       <select
         className="selectDepArr"
         name="selectDepArr"
