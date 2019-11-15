@@ -1,21 +1,19 @@
-import React, { Component } from "react";
+import React from "react";
 import DatePicker from "react-date-picker";
 import "./datepick.css";
 
-class DatePickerr extends Component {
-  state = {
-    date: new Date()
-  };
-
-  onChange = date => this.setState({ date });
-
-  render() {
-    return (
-      <div className="myDate">
-        <DatePicker onChange={this.onChange} value={this.state.date} />
-      </div>
-    );
-  }
-}
+const DatePickerr = props => {
+  const onChange = date =>
+    props.setGlobalState({
+      ...props.globalState,
+      date: date
+    });
+  console.log(props);
+  return (
+    <div className="myDate">
+      <DatePicker onChange={onChange} value={props.globalState.date} />
+    </div>
+  );
+};
 
 export default DatePickerr;

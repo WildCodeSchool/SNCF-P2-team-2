@@ -1,31 +1,28 @@
 import React from "react";
-import mockData from "../mockData"; // temporaire
+import uuid from "uuid/index";
 import {
-  DataTimeFormatting,
-  DataDurationFormatting,
-  DataPriceFormatting
+  dataTimeFormatting,
+  dataDurationFormatting,
+  dataPriceFormatting,
+  dataTransportFormatting
 } from "../DataAPIFormatting/DataAPIFormatting";
 import ResultItineraryFormatting from "../ResultItineraryFormatting/ResultItineraryFormatting";
 
-const ResultItineraryInfos = () => {
-  return mockData.map(res => {
+const ResultItineraryInfos = ({ globalState }) => {
+  return globalState.result.map(res => {
     return (
       <ResultItineraryFormatting
-        key={res.depTime + res.arrTime}
-        depTime={DataTimeFormatting(res.depTime)}
-        arrTime={DataTimeFormatting(res.arrTime)}
-        durationJourney={DataDurationFormatting(res.durationJourney)}
+        key={uuid()}
+        depTime={dataTimeFormatting(res.departure_date_time)}
+        arrTime={dataTimeFormatting(res.arrival_date_time)}
+        durationJourney={dataDurationFormatting(res.durations.total)}
         durationWalking={
-          res.durationWalking > 0
-            ? DataDurationFormatting(res.durationWalking)
+          res.durations.walking > 0
+            ? dataDurationFormatting(res.durations.walking)
             : ""
         }
-        transportJourney={res.transportJourney}
-        price={
-          res.price.fareFound
-            ? DataPriceFormatting(res.price.fareTotalValue)
-            : "-"
-        }
+        transportJourney={dataTransportFormatting(res.sections)}
+        price={res.fare.found ? dataPriceFormatting(res.fare.total.value) : "-"}
       />
     );
   });
