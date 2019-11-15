@@ -22,7 +22,7 @@ function App() {
     date: new Date(),
     time: moment(),
     selectValue: "departure",
-    result: {}
+    result: []
   });
   console.log(globalState);
 
