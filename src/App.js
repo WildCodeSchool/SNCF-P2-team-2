@@ -10,39 +10,39 @@ import mockData from "./components/mockData.js";
 import moment from "moment";
 
 const defaultPlaceState = {
-  name: "",
-  stop_area: "",
-  administrative_region: "",
-  addresses: ""
+	name: "",
+	stop_area: "",
+	administrative_region: "",
+	addresses: "",
 };
 
 function App() {
-  const [globalState, setGlobalState] = useState({
-    inputs: {
-      depart: { ...defaultPlaceState },
-      arrival: { ...defaultPlaceState }
-    },
-    date: new Date(),
-    time: moment(),
-    selectValue: "departure",
-    result: mockData
-  });
-  console.log(globalState);
+	const [globalState, setGlobalState] = useState({
+		inputs: {
+			depart: { ...defaultPlaceState },
+			arrival: { ...defaultPlaceState },
+		},
+		date: new Date(),
+		time: moment(),
+		selectValue: "departure",
+		result: mockData,
+	});
+	console.log(globalState);
 
-  return (
-    <div>
-      <Navbar />
-      <BannerUnderNav />
+	return (
+		<div>
+			<Navbar />
+			<BannerUnderNav />
 
-      <main role="main">
-        <Card globalState={globalState} setGlobalState={setGlobalState} />
-        <ResultItineraryInfos
-          globalState={globalState}
-          setGlobalState={setGlobalState}
-        />
-      </main>
-    </div>
-  );
+			<main role="main">
+				<Card globalState={globalState} setGlobalState={setGlobalState} />
+				<ResultItineraryInfos
+					globalState={globalState}
+					setGlobalState={setGlobalState}
+				/>
+			</main>
+		</div>
+	);
 }
 
 export default App;
