@@ -15,6 +15,9 @@ const InputSearchDeparture = ({ globalState, setGlobalState, type }) => {
 		const newGlobalState = { ...globalState };
 
 		if (!param.match("^[a-zA-Z ]*$")) {
+			setInputError(
+				"L’Expression que vous avez entrée contient une syntaxe non valide",
+			);
 			return;
 		}
 
@@ -117,6 +120,7 @@ const InputSearchDeparture = ({ globalState, setGlobalState, type }) => {
 
 	return (
 		<>
+			{inputError && <div className="alert alert-danger">{inputError}</div>}
 			<div
 				className="form-control-container border border-primary rounded"
 				ref={wrapperRef}
