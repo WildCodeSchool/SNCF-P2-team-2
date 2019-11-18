@@ -1,6 +1,27 @@
 #btnsubmit {
-    width: 100px;
+    width: 300px;
 }
 .btn-primary {
     height: 50px;
+}
+/* Extra small devices (portrait phones, less than 576px)*/
+@media (max-width: 575.98px) { 
+    #btnsubmit {
+        width: 350px;
+    }
+}
+
+/*Small devices (landscape phones, 576px and up)*/
+@media (min-width: 576px) and (max-width: 767.98px) { 
+   
+}
+
+/* Medium devices (tablets, 768px and up)*/
+@media (min-width: 768px) and (max-width: 1025px) { 
+    #btnsubmit {
+        margin-left:165px;
+    }
+    .w-100 {
+        width: 130%;
+    }
 }

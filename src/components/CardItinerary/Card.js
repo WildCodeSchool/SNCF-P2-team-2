@@ -39,17 +39,19 @@ function Card(props) {
                   setGlobalState={setGlobalState}
                 />
               </div>
-              <div className="col-sm-12 col-md-3 col-lg-3 my-2">
-                <DatePickerr
-                  globalState={globalState}
-                  setGlobalState={setGlobalState}
-                />
-              </div>
-              <div className="col-sm-12 col-md-3 col-lg-3 my-2">
-                <Timepickerform
-                  globalState={globalState}
-                  setGlobalState={setGlobalState}
-                />
+              <div className="pickersection">
+                <div className="col-sm-12 col-md-3 col-lg-3 my-2">
+                  <DatePickerr
+                    globalState={globalState}
+                    setGlobalState={setGlobalState}
+                  />
+                </div>
+                <div className="col-sm-12 col-md-3 col-lg-3 my-2">
+                  <Timepickerform
+                    globalState={globalState}
+                    setGlobalState={setGlobalState}
+                  />
+                </div>
               </div>
               <div className="col-sm-12 col-md-3 col-lg-3 my-2">
                 <ItinerarySubmitButton

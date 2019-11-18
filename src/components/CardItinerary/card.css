@@ -5,10 +5,27 @@
 .card-shadow {
     box-shadow: 5px 5px 10px #3b3b3b4b;
 }
+.pickersection {
+    display: flex;
+    margin-right: 73px;
+    justify-content: space-around;
+}
 /* Extra small devices (portrait phones, less than 576px)*/
 @media (max-width: 575.98px) { 
     .card-itinerary {
         margin-top: 110px;
+    }
+    .dateandtimepickers {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+    .pickersection {
+        display: flex;
+        flex-direction: row;
+    }
+    #selectDepArr, select {
+        width: 100% !important;
     }
 }
 
@@ -17,6 +34,15 @@
     .card-itinerary {
         margin-top: 110px;
     }
+    .pickersection {
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-start;
+        margin-right: 0px;
+    }
+    #selectDepArr, select {
+        width: 100% !important;
+    }
 }
 
 /* Medium devices (tablets, 768px and up)*/
@@ -24,4 +50,13 @@
     .card-itinerary {
         margin-top: 110px;
     }
+    .pickersection {
+        display: flex;
+        justify-content: space-between;
+        width: 320px;
+    }
+    .row {
+        margin-right: 5px;
+    }
+    
 }

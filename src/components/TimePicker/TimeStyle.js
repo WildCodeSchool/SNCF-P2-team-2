@@ -1,5 +1,6 @@
 import styled from "styled-components";
 import TimePicker from "./TimePicker";
+import "./TimePicker.css";
 
 const StyledTimePicker = styled(TimePicker)`
   & .rc-time-picker-panel-select-option-selected {
