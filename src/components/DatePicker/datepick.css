@@ -10,3 +10,33 @@
 .react-calendar__navigation__label {
     color: #0088CC;
 }
+/* Extra small devices (portrait phones, less than 576px)*/
+@media (max-width: 575.98px) { 
+    .react-date-picker__wrapper{
+        width: 170px;
+        font-size: 15px;
+    }
+    .react-calendar {
+        margin-left:15px;
+    }
+}
+
+/*Small devices (landscape phones, 576px and up)*/
+@media (min-width: 576px) and (max-width: 767.98px) { 
+    .react-date-picker__wrapper {
+     width: 280px;
+
+    }
+    .myDate {
+        width: 30px;
+    }
+}
+
+/* Medium devices (tablets, 768px and up)*/
+@media (min-width: 768px) and (max-width: 1025px) { 
+    .react-date-picker__wrapper {
+     width: 200px;
+     margin-right: 30px;
+    }
+    
+}

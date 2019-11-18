@@ -34,16 +34,24 @@ div.rc-time-picker-panel-inner {
 .rc-time-picker-panel-select-option > ul  {
     height: 550px;
 }
-/*.kWDRsS .rc-time-picker-panel-select, .kWDRsS .rc-time-picker-input, .kWDRsS .rc-time-picker-panel-input {
-    font-family: "Consolas",sans-serif;
-    font-size: 16px;
-    cursor: pointer;
-    border: 1px solid rgb(11, 132, 184);
-    height: 160px; 
-    border-radius: 5px;
-    display: flex;
-    text-align: center;
-    width: 160px;
-    color: black;
-    overflow:scroll;
-}*/
+/* Extra small devices (portrait phones, less than 576px)*/
+@media (max-width: 575.98px) { 
+    .kWDRsS .rc-time-picker-panel-select, .kWDRsS .rc-time-picker-input, .kWDRsS .rc-time-picker-panel-input {
+        display: flex;
+        width: 123px;
+    }
+}
+
+/*Small devices (landscape phones, 576px and up)*/
+@media (min-width: 576px) and (max-width: 767.98px) { 
+    .kWDRsS .rc-time-picker-panel-select, .kWDRsS .rc-time-picker-input, .kWDRsS .rc-time-picker-panel-input {
+        width: 230px;
+    }
+}
+
+/* Medium devices (tablets, 768px and up)*/
+@media (min-width: 768px) and (max-width: 1025px) { 
+    .kWDRsS .rc-time-picker-panel-select, .kWDRsS .rc-time-picker-input, .kWDRsS .rc-time-picker-panel-input {
+        width: 200px;
+    }
+}

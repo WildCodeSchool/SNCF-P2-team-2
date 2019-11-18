@@ -3,6 +3,7 @@ import PropTypes from "prop-types";
 import moment from "moment";
 import TimePicker from "rc-time-picker";
 import "rc-time-picker/assets/index.css";
+import "./TimePicker.css";
 
 const DeliTimePicker = ({ className, onChange, value, ...rest }) => (
   <TimePicker
