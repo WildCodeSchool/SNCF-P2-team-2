@@ -1,0 +1,12 @@
+.errorMsg p {
+  color: red;
+  font-size: 2em;
+}
+.errorMsg {
+  height: 50px;
+width: 100%;
+  border-radius: 10px;
+  margin: 20px;
+  padding: 10px;
+  text-align: center;
+}
