@@ -24,8 +24,7 @@ function App() {
 		selectValue: "departure",
 		result: [],
 	});
-	console.log(globalState);
-
+	
 	return (
 		<div>
 			<Navbar />
