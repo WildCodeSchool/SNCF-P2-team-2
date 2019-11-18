@@ -34,6 +34,7 @@ div.rc-time-picker-panel-inner {
 .rc-time-picker-panel-select-option > ul  {
     height: 550px;
 }
+
 /* Extra small devices (portrait phones, less than 576px)*/
 @media (max-width: 575.98px) { 
     .kWDRsS .rc-time-picker-panel-select, .kWDRsS .rc-time-picker-input, .kWDRsS .rc-time-picker-panel-input {
@@ -54,4 +55,4 @@ div.rc-time-picker-panel-inner {
     .kWDRsS .rc-time-picker-panel-select, .kWDRsS .rc-time-picker-input, .kWDRsS .rc-time-picker-panel-input {
         width: 200px;
     }
-}
+
