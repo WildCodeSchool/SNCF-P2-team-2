@@ -34,16 +34,3 @@ div.rc-time-picker-panel-inner {
 .rc-time-picker-panel-select-option > ul  {
     height: 550px;
 }
-/*.kWDRsS .rc-time-picker-panel-select, .kWDRsS .rc-time-picker-input, .kWDRsS .rc-time-picker-panel-input {
-    font-family: "Consolas",sans-serif;
-    font-size: 16px;
-    cursor: pointer;
-    border: 1px solid rgb(11, 132, 184);
-    height: 160px; 
-    border-radius: 5px;
-    display: flex;
-    text-align: center;
-    width: 160px;
-    color: black;
-    overflow:scroll;
-}*/
