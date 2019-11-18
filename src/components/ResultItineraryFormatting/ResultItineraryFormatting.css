@@ -31,7 +31,76 @@
   font-size: 0.9rem;
 }
 
-
+.card {
+  height: auto !important;
+}
 .card-shadow {
   box-shadow: 5px 5px 10px #3b3b3b4b;
+}
+
+
+/* Smartphones / tablets */
+@media screen and (max-width: 768px) {
+.card {
+ padding: 0px;
+}
+.card-body {
+  font-size: 0.8rem;
+  padding: 10px;
+  height: 100%;
+  display: flex;
+  flex-direction: row;
+  overflow: hide;
+}
+.resultItinerary {
+  height: auto !important;
+  align-items: center !important;
+  padding-top: 7px;
+  padding-bottom: 7px;
+}
+.transportJourney {
+  flex-direction: row !important;
+  justify-content: flex-start !important;
+  width: 100% !important;
+  flex-basis: 100% !important;
+  font-size: 1rem;
+  border-top: 1px solid #d7d7d7 !important;
+  border-bottom: 1px solid #d7d7d7 !important;
+  padding-top: 7px;
+  padding-bottom: 7px;
+}
+.resultTime, .durationJourney, .price, .detailAccess {
+  width: 50% !important;
+  flex-direction: row !important;
+  height: 25px;
+}
+.resultTime, .price{
+  justify-content: flex-start !important;
+}
+.durationJourney, .detailAccess {
+  justify-content: flex-end !important;
+}
+.depTime, .arrTime, .durationJourneyTotal {
+  width: auto !important;
+  min-width: 0px;
+  padding: 3px;
+}
+.border-left, .border-right {
+  border-right: 0px rgba(255, 255, 255, 0) !important;
+  border-left: 0px rgba(255, 255, 255, 0) !important;
+}
+.depTime p, .arrTime p {
+  margin-left: 6px;
+}
+.forVerticalLine {
+  max-width: 10px !important;
+}
+.horizontalLine {
+  display: flex;
+  width: 100%;
+  height: 1px;
+  margin-left: 0px !important;
+  margin-right: 1rem !important;
+}
+
 }
