@@ -9,37 +9,37 @@ import "./styles.css";
 import moment from "moment";
 
 const defaultPlaceState = {
-  name: "",
-  coordPlace: ""
+	name: "",
+	coordPlace: "",
 };
 
 function App() {
-  const [globalState, setGlobalState] = useState({
-    inputs: {
-      depart: { ...defaultPlaceState },
-      arrival: { ...defaultPlaceState }
-    },
-    date: new Date(),
-    time: moment(),
-    selectValue: "departure",
-    result: []
-  });
-  console.log(globalState);
+	const [globalState, setGlobalState] = useState({
+		inputs: {
+			depart: { ...defaultPlaceState },
+			arrival: { ...defaultPlaceState },
+		},
+		date: new Date(),
+		time: moment(),
+		selectValue: "departure",
+		result: [],
+	});
+	console.log(globalState);
 
-  return (
-    <div>
-      <Navbar />
-      <BannerUnderNav />
+	return (
+		<div>
+			<Navbar />
+			<BannerUnderNav />
 
-      <main role="main">
-        <Card globalState={globalState} setGlobalState={setGlobalState} />
-        <ResultItineraryInfos
-          globalState={globalState}
-          setGlobalState={setGlobalState}
-        />
-      </main>
-    </div>
-  );
+			<main role="main">
+				<Card globalState={globalState} setGlobalState={setGlobalState} />
+				<ResultItineraryInfos
+					globalState={globalState}
+					setGlobalState={setGlobalState}
+				/>
+			</main>
+		</div>
+	);
 }
 
 export default App;
