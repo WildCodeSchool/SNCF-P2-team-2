@@ -14,10 +14,7 @@
     "react-dom": "^16.10.2",
     "react-moment": "^0.9.6",
     "react-scripts": "3.2.0",
-<<<<<<< HEAD
-=======
     "react-toastify": "^5.4.1",
->>>>>>> d8544ad6914c7d4c6b3bb10ce7a1eb9bb96f7a23
     "styled-components": "^4.4.1"
   },
   "scripts": {
