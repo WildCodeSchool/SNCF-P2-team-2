@@ -31,7 +31,9 @@
   font-size: 0.9rem;
 }
 
-
+.card {
+  height: auto !important;
+}
 .card-shadow {
   box-shadow: 5px 5px 10px #3b3b3b4b;
 }
@@ -49,6 +51,12 @@
   display: flex;
   flex-direction: row;
   overflow: hide;
+}
+.resultItinerary {
+  height: auto !important;
+  align-items: center !important;
+  padding-top: 7px;
+  padding-bottom: 7px;
 }
 .transportJourney {
   flex-direction: row !important;
@@ -93,7 +101,6 @@
   height: 1px;
   margin-left: 0px !important;
   margin-right: 1rem !important;
-  flex-basis: 0% !important;
 }
 
 }

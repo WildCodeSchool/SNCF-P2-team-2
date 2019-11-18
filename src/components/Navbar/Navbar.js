@@ -1,15 +1,17 @@
 import React from "react";
 import "./navbar.css";
-import logo from "./img/Sncf-logo.svg";
+import logo from "./img/Logo_SNCF_Transilien_2019.png";
 
 function Navbar() {
   return (
     <div className="container">
       <div className="row">
-        <div className="mastheader bg-white Sticky-top col-12 py-5 d-flex justify-content-start">
-          <img className="img-fluid" alt="SNCF" src={logo} />
-          <h1 className="ml-3 mt-4 text-uppercase">Transilien</h1>
-        </div>
+        <nav
+          role="navigation"
+          className="mastheader bg-white Sticky-top col-12 d-flex justify-content-start align-items-center"
+        >
+          <img className="logoTransilien" alt="SNCF" src={logo} />
+        </nav>
       </div>
     </div>
   );
