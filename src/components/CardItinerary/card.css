@@ -24,6 +24,9 @@
         display: flex;
         flex-direction: row;
     }
+    #selectDepArr, select {
+        width: 100% !important;
+    }
 }
 
 /*Small devices (landscape phones, 576px and up)*/
@@ -34,6 +37,11 @@
     .pickersection {
         display: flex;
         flex-direction: row;
+        justify-content: flex-start;
+        margin-right: 0px;
+    }
+    #selectDepArr, select {
+        width: 100% !important;
     }
 }
 
