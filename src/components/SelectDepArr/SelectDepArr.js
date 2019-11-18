@@ -15,7 +15,7 @@ const SelectDepArr = props => {
         className="selectDepArr"
         name="selectDepArr"
         id="selectDepArr"
-        onClick={pickSelectedOption}
+        onChange={pickSelectedOption}
       >
         <option data-role="default-hidden-option" data-id="1" value="departure">
           Départ à
