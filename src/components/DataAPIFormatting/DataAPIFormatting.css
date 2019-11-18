@@ -1,0 +1,11 @@
+.puce {
+  display: inline-block;
+  content: "";
+  margin: 0 0.5rem;
+  color:
+  #cbcbcb;
+  width: .3rem;
+  height: .3rem;
+  border-radius: 1rem;
+  border: 0.3rem solid;
+}

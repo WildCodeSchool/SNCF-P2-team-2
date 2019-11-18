@@ -1,0 +1,12 @@
+.react-date-picker__wrapper {
+    border: 1px solid rgb(11, 132, 184);
+    height: 50px;
+    width: 200px;
+    border-radius: 5px;
+}
+.react-calendar {
+    color: #0088CC;
+}
+.react-calendar__navigation__label {
+    color: #0088CC;
+}
