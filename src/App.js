@@ -13,21 +13,22 @@ const defaultPlaceState = {
 };
 
 function App() {
-  const [globalState, setGlobalState] = useState({
-    inputs: {
-      depart: { ...defaultPlaceState },
-      arrival: { ...defaultPlaceState }
-    },
-    date: new Date(),
-    time: moment(),
-    selectValue: "departure",
-    result: []
-  });
-
-  return (
-    <div>
-      <Navbar />
-      <BannerUnderNav />
+  
+	const [globalState, setGlobalState] = useState({
+		inputs: {
+			depart: { ...defaultPlaceState },
+			arrival: { ...defaultPlaceState },
+		},
+		date: new Date(),
+		time: moment(),
+		selectValue: "departure",
+		result: [],
+	});
+	
+	return (
+		<div>
+			<Navbar />
+			<BannerUnderNav />
 
       <main role="main">
         <Card globalState={globalState} setGlobalState={setGlobalState} />
